@@ -1,0 +1,42 @@
+package Fileclass;
+
+import java.io.File;
+
+/**
+ *	?г?????е????? 
+ * @author life-1
+ * @project_name IOStream
+ * @type_name Test03
+ * @creation_time 2019??6??19?? ????9:55:48
+ */
+public class Test03 {
+	public static void main(String[] args) {
+//		listSub1("D:\\java.work\\IOStream");
+		listSub2("D:\\java.work\\IOStream");
+	}
+	
+	//??????????е?????
+	public	static	void	listSub1(String	dirname) {
+		File	dir=new	File(dirname);
+		
+		String[]	subs=dir.list();
+		for (String string : subs) {
+			System.out.println(string);
+		}
+	}
+	
+	//???????·??,?????????????е?????
+	private static void listSub2(String	dirname) {
+		File	dir=new	File(dirname);
+		
+		File[]	listFile=dir.listFiles();
+		for (File file : listFile) {
+			System.out.println(file.getAbsolutePath());
+			
+			//???file???????,?????????е?????
+			if(file.isDirectory()) {
+				listSub2(file.getAbsolutePath());	//??????
+			}
+		}
+	}
+}

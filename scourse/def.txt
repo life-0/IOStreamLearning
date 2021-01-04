@@ -1,0 +1,7 @@
+这是字符打印流
+java.io.FileNotFoundException: F:sadha.txt (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at Print.printWriter.main(printWriter.java:22)

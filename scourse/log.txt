@@ -1,0 +1,8 @@
+helloworld
+这一行信息就不是在屏幕上打印，而是打印到pstream流中，即log.txt
+java.io.FileNotFoundException: F:add.txt (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at Print.printStream.main(printStream.java:35)

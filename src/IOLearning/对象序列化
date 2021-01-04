@@ -1,0 +1,13 @@
+	对象序列化：
+		把对象转换为01二进制序列就是对象序列化
+	对象反序列化：
+		把一组01二进制对象转换为对象
+		
+	注意：
+		对象序列化/反序列化前提是对象的类要实现Serializable接口，该接口是一个标志性接口，没有任何方法
+		
+		ObjectOutputStream类，可以把对象序列化，把序列化后的二进制保存到文件中
+		ObjectInputStream类可以从文件读取01序列，把这组01序列转换为对象(反序列化)	
+		
+	一般情况下，类实现了Serializable接口后，手动的添加一个序列化版号字段：
+	private	static	final	long	serialversionUID=23332956456465L;
